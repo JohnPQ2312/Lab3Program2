@@ -15,7 +15,7 @@
       <Text layoutX="144.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittletext" text="Rol" />
       <TextField fx:id="user_Username" layoutX="221.0" layoutY="106.0" />
       <TextField fx:id="userPassword" layoutX="221.0" layoutY="184.0" />
-      <Button fx:id="register" layoutX="473.0" layoutY="242.0" mnemonicParsing="false" text="Registrar" />
+      <Button fx:id="register" layoutX="473.0" layoutY="242.0" mnemonicParsing="false" onAction="#btnRegister" text="Registrar" />
       <Text layoutX="83.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittletext" text="Expiracion de contrato:" />
       <Label fx:id="printConfirmation" layoutX="199.0" layoutY="436.0" />
       <TextField fx:id="userRole" layoutX="221.0" layoutY="254.0" />
