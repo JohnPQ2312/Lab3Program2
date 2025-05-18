@@ -4,9 +4,7 @@
  */
 package com.mycompany.lab3program2;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import jakarta.persistence.*;
 import java.util.List;
 
 public class UserManager {
@@ -26,6 +24,30 @@ public class UserManager {
         List<Users> users = em.createQuery("SELECT u FROM Users u", Users.class).getResultList();
         em.close();
         return users;
+    }
+    
+    public void deleteUser(Long userID){
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        
+        Users user = em.find(Users.class, userID);
+        
+        if (user != null){
+            em.remove(user);
+        }
+        
+        em.getTransaction().commit();
+        em.close();
+    }
+    
+    public void updateUser(Users user){
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        
+        em.merge(user);
+        
+        em.getTransaction().commit();
+        em.close();
     }
 // Métodos para actualizar y eliminar usuarios
 }

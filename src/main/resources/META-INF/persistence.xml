@@ -4,8 +4,7 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>com.mycompany.lab3program2.Users</class>
     <properties>
-      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
-      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:FREE"/>
       <property name="jakarta.persistence.jdbc.user" value="JPerez"/>
       <property name="jakarta.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>

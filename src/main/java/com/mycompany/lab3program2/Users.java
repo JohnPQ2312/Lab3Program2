@@ -6,7 +6,7 @@ package com.mycompany.lab3program2;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.*;
+import jakarta.persistence.*;
 /**
  *
  * @author jp570

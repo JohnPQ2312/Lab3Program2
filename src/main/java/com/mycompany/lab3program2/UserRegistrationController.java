@@ -28,7 +28,7 @@ public class UserRegistrationController{
     private DatePicker userDatePicker;
     
     @FXML
-    private TextField userID, user_Username, userPassword, userRole;
+    private TextField user_Username, userPassword, userRole;
     
     @FXML
     private Button register, goToUserList;  
