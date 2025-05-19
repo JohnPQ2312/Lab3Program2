@@ -17,6 +17,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListCell;
@@ -52,6 +53,12 @@ public class UserListController implements Initializable {
         saveChanges.setDisable(false);
     }
     
+    private void showAlert(String msg) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(msg);
+        alert.showAndWait();
+    }
+    
     @FXML
     private void btnSaveChanges() {
         UserManager userManager = new UserManager();
@@ -71,6 +78,7 @@ public class UserListController implements Initializable {
             userDatePicker.setDisable(true);
             
             userManager.updateUser(selectedUser);
+            showAlert("Cambios guardados.");
 
             userList.setItems(FXCollections.observableArrayList(userManager.getUsers()));
         }
@@ -84,6 +92,8 @@ public class UserListController implements Initializable {
         Users selectedUser = userList.getSelectionModel().getSelectedItem();
         userManager.deleteUser(selectedUser.getId());
 
+        showAlert("Usuario eliminado.");
+        
         user_Username.clear();
         userPassword.clear();
         userRole.clear();

@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" styleClass="background-app" stylesheets="@primary.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lab3program2.UserRegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" styleClass="background-app" stylesheets="@../../../styles/userregistration.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.lab3program2.UserRegistrationController">
    <children>
-      <Text layoutX="268.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittleApp" text="Registro de Usuario" />
-      <Text layoutX="101.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittletext" text="Nombre de usuario" />
-      <Text layoutX="123.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittletext" text="Contraseña" />
-      <Text layoutX="144.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittletext" text="Rol" />
-      <TextField fx:id="user_Username" layoutX="221.0" layoutY="106.0" />
-      <TextField fx:id="userPassword" layoutX="221.0" layoutY="184.0" />
+      <Text layoutX="228.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Registro de Usuario" />
+      <Text layoutX="79.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-field" text="Nombre de usuario" />
+      <Text layoutX="104.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-field" text="Contraseña" />
+      <Text layoutX="129.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-field" text="Rol" />
+      <TextField fx:id="user_Username" layoutX="231.0" layoutY="105.0" />
+      <TextField fx:id="userPassword" layoutX="231.0" layoutY="183.0" styleClass="password-field" />
       <Button fx:id="register" layoutX="473.0" layoutY="242.0" mnemonicParsing="false" onAction="#btnRegister" text="Registrar" />
-      <Text layoutX="83.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tittletext" text="Expiracion de contrato:" />
+      <Text layoutX="68.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-field" text="Expiracion de contrato:" />
       <Label fx:id="printConfirmation" layoutX="199.0" layoutY="436.0" />
-      <TextField fx:id="userRole" layoutX="221.0" layoutY="254.0" />
-      <DatePicker fx:id="userDatePicker" layoutX="221.0" layoutY="310.0" />
+      <TextField fx:id="userRole" layoutX="231.0" layoutY="247.0" />
+      <DatePicker fx:id="userDatePicker" layoutX="231.0" layoutY="308.0" prefHeight="32.0" prefWidth="179.0" />
       <Button fx:id="goToUserList" layoutX="453.0" layoutY="183.0" mnemonicParsing="false" onAction="#userListScreen" text="Lista de usuarios" />
    </children>
 </AnchorPane>
